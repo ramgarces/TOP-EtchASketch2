@@ -7,7 +7,7 @@ const numSquares = 16;
 squaresContainer.style.width = `${width}px`;
 squaresContainer.style.height = `${height}px`;
 
-function addSquares() {
+function createSquares() {
     for(let i = 0; i < numSquares * numSquares; i++) {
         let newSquare = document.createElement("div");
         newSquare.style.border = "1px solid grey";
@@ -18,4 +18,4 @@ function addSquares() {
     }
 }
 
-addSquares();
+createSquares();
