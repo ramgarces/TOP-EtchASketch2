@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: bisque;
+    background-color: #242424;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,5 +21,5 @@ body {
     background-color: white;
     display: flex;
     flex-wrap: wrap;
-    border: 2rem solid green;
+    border: 1rem solid green;
 }
