@@ -10,12 +10,16 @@ squaresContainer.style.height = `${height}px`;
 function createSquares() {
     for(let i = 0; i < numSquares * numSquares; i++) {
         let newSquare = document.createElement("div");
-        newSquare.style.border = "1px solid grey";
-        newSquare.style.flex = "1 1 auto";
-        newSquare.style.width = `${width / numSquares}px`;
-        newSquare.style.height = `${height / numSquares}px`
+        addSquareStyle(newSquare);
         squaresContainer.appendChild(newSquare);
     }
+}
+
+function addSquareStyle(newSquare) {
+    newSquare.style.border = "1px solid grey";
+    newSquare.style.flex = "1 1 auto";
+    newSquare.style.width = `${width / numSquares}px`;
+    newSquare.style.height = `${height / numSquares}px`
 }
 
 createSquares();
