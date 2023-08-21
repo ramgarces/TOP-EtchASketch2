@@ -3,7 +3,7 @@ const squaresContainer = document.querySelector(".squares-container");
 
 const width = 800;
 const height = width;
-const numSquares = 16;
+const numSquares = 100;
 squaresContainer.style.width = `${width}px`;
 squaresContainer.style.height = `${height}px`;
 
@@ -12,7 +12,10 @@ function createSquares() {
         let newSquare = document.createElement("div");
         addSquareStyle(newSquare);
         squaresContainer.appendChild(newSquare);
-    }
+        newSquare.addEventListener("mouseover", function () {
+            newSquare.style.backgroundColor = "black";
+        });
+    };
 }
 
 function addSquareStyle(newSquare) {
