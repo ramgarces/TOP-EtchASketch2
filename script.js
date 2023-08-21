@@ -1,14 +1,31 @@
+// Variables
 const body = document.querySelector("body");
 const squaresContainer = document.querySelector(".squares-container");
 const changeSizeButton = document.querySelector(".change-size");
 
 const width = 500;
 const height = width;
-const numSquares = 25;
+const numSquares = 16;
+
 squaresContainer.style.width = `${width}px`;
 squaresContainer.style.height = `${height}px`;
 
-function createSquares() {
+changeSizeButton.addEventListener("click", function () {
+    squaresContainer.textContent = "";
+    let newSize = prompt("How many squares per side?", 16);
+    if (newSize < 2) {
+        numSquares = 16;
+    } else if (newSize > 100) {
+        numSquares = 100;
+    } else {
+        numSquares = newSize;
+    }
+    
+    createSquares(numSquares);
+});
+
+// Functions
+function createSquares(numSquares) {
     for(let i = 0; i < numSquares * numSquares; i++) {
         let newSquare = document.createElement("div");
         addSquareStyle(newSquare);
@@ -17,6 +34,7 @@ function createSquares() {
             newSquare.style.backgroundColor = "black";
         });
     };
+    
 }
 
 function addSquareStyle(newSquare) {
@@ -26,4 +44,4 @@ function addSquareStyle(newSquare) {
     newSquare.style.height = `${height / numSquares}px`
 }
 
-createSquares();
+createSquares(numSquares);
