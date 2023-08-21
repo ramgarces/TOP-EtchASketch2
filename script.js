@@ -10,6 +10,8 @@ function addSquares() {
     for(let i = 0; i < 16; i++) {
         let newSquare = document.createElement("div");
         newSquare.style.border = "1px solid black";
+        newSquare.style.margin = "0";
+        newSquare.style.padding = "0";
         squaresContainer.appendChild(newSquare);
     }
 }
