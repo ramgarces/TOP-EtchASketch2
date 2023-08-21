@@ -1,5 +1,6 @@
 const body = document.querySelector("body");
 const squaresContainer = document.querySelector(".squares-container");
+const changeSizeButton = document.querySelector(".change-size");
 
 const width = 500;
 const height = width;
