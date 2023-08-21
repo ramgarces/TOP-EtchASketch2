@@ -1,9 +1,25 @@
 * {
     box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .squares-container {
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid black;
+    border: 2rem solid green;
 }
