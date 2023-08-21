@@ -1,9 +1,9 @@
 const body = document.querySelector("body");
 const squaresContainer = document.querySelector(".squares-container");
 
-const height = 1000;
+const width = 1000;
 const numSquares = 16;
-squaresContainer.style.width = `${height}px`;
+squaresContainer.style.width = `${width}px`;
 squaresContainer.style.border = "1px solid red";
 squaresContainer.style.display = "flex";
 
