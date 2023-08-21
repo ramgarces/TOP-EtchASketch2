@@ -1,9 +1,9 @@
 const body = document.querySelector("body");
 const squaresContainer = document.querySelector(".squares-container");
 
-const width = 800;
+const width = 500;
 const height = width;
-const numSquares = 100;
+const numSquares = 25;
 squaresContainer.style.width = `${width}px`;
 squaresContainer.style.height = `${height}px`;
 
@@ -19,7 +19,7 @@ function createSquares() {
 }
 
 function addSquareStyle(newSquare) {
-    newSquare.style.border = "1px solid grey";
+    // newSquare.style.border = "1px solid grey";
     newSquare.style.flex = "1 1 auto";
     newSquare.style.width = `${width / numSquares}px`;
     newSquare.style.height = `${height / numSquares}px`
