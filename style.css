@@ -22,5 +22,5 @@ body {
     background-color: white;
     display: flex;
     flex-wrap: wrap;
-    border: 1rem solid green;
+    /* border: 1rem solid green; */
 }
