@@ -4,6 +4,7 @@ const squaresContainer = document.querySelector(".squares-container");
 const height = 1000;
 squaresContainer.style.width = `${height}px`;
 squaresContainer.style.border = "1px solid red";
+squaresContainer.style.display = "flex";
 
 function addSquares() {
     for(let i = 0; i < 16; i++) {
