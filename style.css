@@ -1,8 +1,9 @@
 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 .squares-container {
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid black;
 }
