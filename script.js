@@ -5,22 +5,21 @@ const changeSizeButton = document.querySelector(".change-size");
 
 const width = 500;
 const height = width;
-const numSquares = 16;
+let numSquares = 16;
 
 squaresContainer.style.width = `${width}px`;
 squaresContainer.style.height = `${height}px`;
 
 changeSizeButton.addEventListener("click", function () {
-    squaresContainer.textContent = "";
     let newSize = prompt("How many squares per side?", 16);
     if (newSize < 2) {
-        numSquares = 16;
+        numSquares = 2;
     } else if (newSize > 100) {
         numSquares = 100;
     } else {
         numSquares = newSize;
     }
-    
+    squaresContainer.innerHTML = "";
     createSquares(numSquares);
 });
 
@@ -33,8 +32,7 @@ function createSquares(numSquares) {
         newSquare.addEventListener("mouseover", function () {
             newSquare.style.backgroundColor = "black";
         });
-    };
-    
+    }; 
 }
 
 function addSquareStyle(newSquare) {
