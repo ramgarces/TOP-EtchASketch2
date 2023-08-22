@@ -1,8 +1,9 @@
-// Variables
+// DOM Variables
 const body = document.querySelector("body");
 const squaresContainer = document.querySelector(".squares-container");
 const changeSizeButton = document.querySelector(".change-size");
 
+// Container variables
 const width = 500;
 const height = width;
 let numSquares = 16;
@@ -10,6 +11,7 @@ let numSquares = 16;
 squaresContainer.style.width = `${width}px`;
 squaresContainer.style.height = `${height}px`;
 
+// Button event listeners
 changeSizeButton.addEventListener("click", function () {
     let newSize = prompt("How many squares per side?", 16);
     if (newSize < 2) {
