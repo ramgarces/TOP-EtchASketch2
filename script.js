@@ -44,7 +44,6 @@ function createSquares(numSquares) {
 }
 
 function addSquareStyle(newSquare) {
-    // newSquare.style.border = "1px solid grey";
     newSquare.style.flex = "1 1 auto";
     newSquare.style.width = `${width / numSquares}px`;
     newSquare.style.height = `${height / numSquares}px`
