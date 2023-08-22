@@ -30,7 +30,8 @@ function createSquares(numSquares) {
         addSquareStyle(newSquare);
         squaresContainer.appendChild(newSquare);
         newSquare.addEventListener("mouseover", function () {
-            newSquare.style.backgroundColor = "black";
+            // newSquare.style.backgroundColor = "black"; //color change to black
+            newSquare.style.backgroundColor = randomColor(); //random color
         });
     }; 
 }
@@ -40,6 +41,13 @@ function addSquareStyle(newSquare) {
     newSquare.style.flex = "1 1 auto";
     newSquare.style.width = `${width / numSquares}px`;
     newSquare.style.height = `${height / numSquares}px`
+}
+
+function randomColor() {
+    let num1 = Math.floor(Math.random() * 256);
+    let num2 = Math.floor(Math.random() * 256);
+    let num3 = Math.floor(Math.random() * 256);
+    return `rgb(${num1}, ${num2}, ${num3})`
 }
 
 createSquares(numSquares);
