@@ -23,15 +23,20 @@ changeSizeButton.addEventListener("click", function () {
     createSquares(numSquares);
 });
 
+
 // Functions
 function createSquares(numSquares) {
     for(let i = 0; i < numSquares * numSquares; i++) {
         let newSquare = document.createElement("div");
         addSquareStyle(newSquare);
         squaresContainer.appendChild(newSquare);
+        let squareOpacity = 0;
         newSquare.addEventListener("mouseover", function () {
             // newSquare.style.backgroundColor = "black"; //color change to black
-            newSquare.style.backgroundColor = randomSquareColor(); //random color
+            // newSquare.style.backgroundColor = randomSquareColor(); //random color
+            let newOpacity = squareOpacity + 0.1;
+            newSquare.style.backgroundColor = `rgba(0, 0, 0, ${newOpacity})`;
+            squareOpacity += 0.1;
         });
     }; 
 }
