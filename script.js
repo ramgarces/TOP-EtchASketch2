@@ -31,7 +31,7 @@ function createSquares(numSquares) {
         squaresContainer.appendChild(newSquare);
         newSquare.addEventListener("mouseover", function () {
             // newSquare.style.backgroundColor = "black"; //color change to black
-            newSquare.style.backgroundColor = randomColor(); //random color
+            newSquare.style.backgroundColor = randomSquareColor(); //random color
         });
     }; 
 }
@@ -43,7 +43,7 @@ function addSquareStyle(newSquare) {
     newSquare.style.height = `${height / numSquares}px`
 }
 
-function randomColor() {
+function randomSquareColor() {
     let num1 = Math.floor(Math.random() * 256);
     let num2 = Math.floor(Math.random() * 256);
     let num3 = Math.floor(Math.random() * 256);
