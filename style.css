@@ -54,6 +54,8 @@ body {
 
 .bottom-buttons-container {
     align-self: end;
+    display: flex;
+    gap: 2rem;
 }
 
 button {
