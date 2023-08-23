@@ -12,6 +12,7 @@ html {
 body {
     background-color: #242424;
     display: flex;
+    gap: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -23,4 +24,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     /* border: 1rem solid green; */
+}
+
+button {
+    width: 8rem;
+    height: 4rem;
+    font-size: 18px;
+    border-radius: .5rem;
+    border: none;
+    margin: 0 1rem;
+    transition: scale .2s ease-in-out;
+}
+
+button:hover {
+    scale: 1.1
 }
