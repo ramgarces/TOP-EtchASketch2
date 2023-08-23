@@ -82,6 +82,8 @@ function createSquares(numSquares) {
                 let newOpacity = squareOpacity + 0.1;
                 newSquare.style.backgroundColor = `rgba(0, 0, 0, ${newOpacity})`;
                 squareOpacity += 0.1;
+            } else if (eraserFlag) {
+                newSquare.style.backgroundColor = "white";
             }
         });
     };
