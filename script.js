@@ -1,7 +1,7 @@
 // DOM Variables - Selectors
 const body = document.querySelector("body");
 const squaresContainer = document.querySelector(".squares-container");
-const changeSizeButton = document.querySelector(".change-size");
+const changeSizeButton = document.querySelector(".change-size-button");
 const blackSquaresButton = document.querySelector(".black-squares-button");
 const rainbowSquaresButton = document.querySelector(".rainbow-squares-button");
 const greyscaleSquaresButton = 
