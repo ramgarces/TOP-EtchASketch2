@@ -41,7 +41,7 @@ blackSquaresButton.addEventListener("click", function() {
     rainbowFlag = false;
     greyscaleFlag = false;
     eraserFlag = false;
-    
+    changeActiveButtonBorder();
 });
 
 rainbowSquaresButton.addEventListener("click", function () {
@@ -49,6 +49,7 @@ rainbowSquaresButton.addEventListener("click", function () {
     rainbowFlag = true;
     greyscaleFlag = false;
     eraserFlag = false;
+    changeActiveButtonBorder();
 })
 
 greyscaleSquaresButton.addEventListener("click", function () {
@@ -56,6 +57,7 @@ greyscaleSquaresButton.addEventListener("click", function () {
     rainbowFlag = false;
     greyscaleFlag = true;
     eraserFlag = false;
+    changeActiveButtonBorder();
 })
 
 eraserButton.addEventListener("click", function () {
@@ -63,6 +65,7 @@ eraserButton.addEventListener("click", function () {
     rainbowFlag = false;
     greyscaleFlag = false;
     eraserFlag = true;
+    changeActiveButtonBorder();
 })
 
 clearButton.addEventListener("click", function () {
@@ -81,13 +84,14 @@ function createSquares(numSquares) {
             if (blackFlag) {
                 newSquare.style.backgroundColor = "black";
             } else if (rainbowFlag) {
-                newSquare.style.backgroundColor = randomSquareColor(); 
+                newSquare.style.backgroundColor = randomSquareColor();
             } else if (greyscaleFlag) {
                 let newOpacity = squareOpacity + 0.1;
                 newSquare.style.backgroundColor = `rgba(0, 0, 0, ${newOpacity})`;
                 squareOpacity += 0.1;
             } else if (eraserFlag) {
                 newSquare.style.backgroundColor = "white";
+                
             }
         });
     };
@@ -104,6 +108,32 @@ function randomSquareColor() {
     let num2 = Math.floor(Math.random() * 256);
     let num3 = Math.floor(Math.random() * 256);
     return `rgb(${num1}, ${num2}, ${num3})`
+}
+
+function changeActiveButtonBorder() {
+    blackSquaresButton.style.border = "";
+    blackSquaresButton.style.backgroundColor = "black";
+
+    rainbowSquaresButton.style.border = "";
+    rainbowSquaresButton.style.backgroundColor = 
+    "linear-gradient(red, orange, yellow, green, blue, indigo, violet)";
+
+    greyscaleSquaresButton.style.border = "";
+    greyscaleSquaresButton.style.backgroundColor = "#aaaaaa";
+
+    eraserButton.style.border = "";
+    eraserButton.style.backgroundColor = "#c4c4c4";
+
+    if (blackFlag) {
+        blackSquaresButton.style.border = "5px solid white";
+    } else if (rainbowFlag) {
+        rainbowSquaresButton.style.border = "5px solid white";
+    } else if (greyscaleFlag) {
+        greyscaleSquaresButton.style.border = "5px solid white";
+    } else if (eraserFlag) {
+        eraserButton.style.border = "5px solid white";
+        eraserButton.style.backgroundColor = "green";
+    }
 }
 
 createSquares(numSquares);
