@@ -11,6 +11,11 @@ let numSquares = 16;
 squaresContainer.style.width = `${width}px`;
 squaresContainer.style.height = `${height}px`;
 
+// Color flag variables
+let blackFlag = true;
+let rainbowFlag = false;
+let darkenFlag = false;
+
 // Button event listeners
 changeSizeButton.addEventListener("click", function () {
     let newSize = prompt("How many squares per side?", 16);
