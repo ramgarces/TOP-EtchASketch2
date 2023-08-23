@@ -19,6 +19,10 @@ body {
     height: 100%;
 }
 
+.middle-container {
+    display: flex;
+}
+
 .squares-container {
     background-color: white;
     display: flex;
