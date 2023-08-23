@@ -33,6 +33,7 @@ changeSizeButton.addEventListener("click", function () {
     } else {
         numSquares = newSize;
     }
+    changeActiveButtonBorder();
     createSquares(numSquares);
 });
 
@@ -141,4 +142,6 @@ function changeActiveButtonBorder() {
     }
 }
 
+
+changeActiveButtonBorder();
 createSquares(numSquares);
