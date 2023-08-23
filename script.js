@@ -39,6 +39,12 @@ blackSquaresButton.addEventListener("click", function() {
     darkenFlag = false;
 });
 
+rainbowSquaresButton.addEventListener("click", function () {
+    blackFlag = false;
+    rainbowFlag = true;
+    darkenFlag = false;
+})
+
 // Functions
 function createSquares(numSquares) {
     for(let i = 0; i < numSquares * numSquares; i++) {
