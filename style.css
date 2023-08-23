@@ -30,6 +30,12 @@ body {
     /* border: 1rem solid green; */
 }
 
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 button {
     width: 8rem;
     height: 4rem;
