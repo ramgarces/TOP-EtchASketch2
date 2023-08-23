@@ -4,7 +4,10 @@ const squaresContainer = document.querySelector(".squares-container");
 const changeSizeButton = document.querySelector(".change-size");
 const blackSquaresButton = document.querySelector(".black-squares-button");
 const rainbowSquaresButton = document.querySelector(".rainbow-squares-button");
-const greyscaleSquaresButton = document.querySelector(".greyscale-squares-button");
+const greyscaleSquaresButton = 
+    document.querySelector(".greyscale-squares-button");
+const eraserButton = document.querySelector(".eraser-button");
+const clearButton = document.querySelector(".clear-button");
 
 // Container variables
 const width = 500;
