@@ -59,13 +59,17 @@ function createSquares(numSquares) {
         squaresContainer.appendChild(newSquare);
         let squareOpacity = 0;
         newSquare.addEventListener("mouseover", function () {
-            // newSquare.style.backgroundColor = "black"; //color change to black
-            // newSquare.style.backgroundColor = randomSquareColor(); //random color
-            let newOpacity = squareOpacity + 0.1;
-            newSquare.style.backgroundColor = `rgba(0, 0, 0, ${newOpacity})`;
-            squareOpacity += 0.1;
+            if (blackFlag) {
+                newSquare.style.backgroundColor = "black";
+            } else if (rainbowFlag) {
+                newSquare.style.backgroundColor = randomSquareColor(); //random color
+            } else if (darkenFlag) {
+                let newOpacity = squareOpacity + 0.1;
+                newSquare.style.backgroundColor = `rgba(0, 0, 0, ${newOpacity})`;
+                squareOpacity += 0.1;
+            }
         });
-    }; 
+    };
 }
 
 function addSquareStyle(newSquare) {
