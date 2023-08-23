@@ -49,7 +49,7 @@ button:hover {
 
 .rainbow-squares-button {
     background-image: 
-    linear-gradient(to right, red, orange, yellow, green,
+    linear-gradient(red, orange, yellow, green,
     blue, indigo, violet);
     color: #222222;
     font-weight: bold;
