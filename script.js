@@ -58,6 +58,13 @@ greyscaleSquaresButton.addEventListener("click", function () {
     eraserFlag = false;
 })
 
+eraserButton.addEventListener("click", function () {
+    blackFlag = false;
+    rainbowFlag = false;
+    greyscaleFlag = false;
+    eraserFlag = true;
+})
+
 // Functions
 function createSquares(numSquares) {
     squaresContainer.innerHTML = "";
