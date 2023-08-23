@@ -12,7 +12,7 @@ html {
 body {
     background-color: #242424;
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -27,6 +27,12 @@ body {
 }
 
 .middle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.middle-top {
     display: flex;
     gap: 2rem;
 }
@@ -44,6 +50,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.bottom-buttons-container {
+
 }
 
 button {
