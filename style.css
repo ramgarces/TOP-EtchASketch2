@@ -12,7 +12,7 @@ html {
 body {
     background-color: #242424;
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
