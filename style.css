@@ -96,3 +96,12 @@ button:hover {
     font-weight: bold;
     background-color: rgba(0, 245, 0, .5);
 }
+
+.clear-button {
+    background-color: lightcoral;
+    font-weight: bold;
+}
+
+.clear-button:hover {
+    background-color: red;
+}
