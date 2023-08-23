@@ -39,3 +39,21 @@ button {
 button:hover {
     scale: 1.1
 }
+
+.black-squares-button {
+    background-color: black;
+    color: #cccccc;
+}
+
+.rainbow-squares-button {
+    background-image: 
+    linear-gradient(to right, red, orange, yellow, green,
+    blue, indigo, violet);
+    color: #222222;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px white;
+}
+
+.greyscale-squares-button {
+    background: #aaaaaa;
+}
