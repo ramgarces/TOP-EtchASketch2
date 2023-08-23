@@ -21,6 +21,7 @@ squaresContainer.style.height = `${height}px`;
 let blackFlag = true;
 let rainbowFlag = false;
 let greyscaleFlag = false;
+let eraserFlag = false;
 
 // Event listeners
 changeSizeButton.addEventListener("click", function () {
@@ -39,18 +40,22 @@ blackSquaresButton.addEventListener("click", function() {
     blackFlag = true;
     rainbowFlag = false;
     greyscaleFlag = false;
+    eraserFlag = false;
+    
 });
 
 rainbowSquaresButton.addEventListener("click", function () {
     blackFlag = false;
     rainbowFlag = true;
     greyscaleFlag = false;
+    eraserFlag = false;
 })
 
 greyscaleSquaresButton.addEventListener("click", function () {
     blackFlag = false;
     rainbowFlag = false;
     greyscaleFlag = true;
+    eraserFlag = false;
 })
 
 // Functions
