@@ -91,3 +91,8 @@ button:hover {
 .greyscale-squares-button {
     background: #aaaaaa;
 }
+
+.change-size-button {
+    font-weight: bold;
+    background-color: rgba(0, 245, 0, .5);
+}
