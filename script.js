@@ -62,7 +62,7 @@ function createSquares(numSquares) {
             if (blackFlag) {
                 newSquare.style.backgroundColor = "black";
             } else if (rainbowFlag) {
-                newSquare.style.backgroundColor = randomSquareColor(); //random color
+                newSquare.style.backgroundColor = randomSquareColor(); 
             } else if (greyscaleFlag) {
                 let newOpacity = squareOpacity + 0.1;
                 newSquare.style.backgroundColor = `rgba(0, 0, 0, ${newOpacity})`;
