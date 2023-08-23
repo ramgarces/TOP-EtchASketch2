@@ -4,7 +4,7 @@ const squaresContainer = document.querySelector(".squares-container");
 const changeSizeButton = document.querySelector(".change-size");
 const blackSquaresButton = document.querySelector(".black-squares-button");
 const rainbowSquaresButton = document.querySelector(".rainbow-squares-button");
-const darkenSquaresButton = document.querySelector(".darken-squares-button");
+const greyscaleSquaresButton = document.querySelector(".greyscale-squares-button");
 
 // Container variables
 const width = 500;
@@ -19,7 +19,7 @@ let blackFlag = true;
 let rainbowFlag = false;
 let greyscaleFlag = false;
 
-// Button event listeners
+// Event listeners
 changeSizeButton.addEventListener("click", function () {
     let newSize = prompt("How many squares per side?", 16);
     if (newSize < 2) {
@@ -29,7 +29,6 @@ changeSizeButton.addEventListener("click", function () {
     } else {
         numSquares = newSize;
     }
-    squaresContainer.innerHTML = "";
     createSquares(numSquares);
 });
 
@@ -45,7 +44,7 @@ rainbowSquaresButton.addEventListener("click", function () {
     greyscaleFlag = false;
 })
 
-darkenSquaresButton.addEventListener("click", function () {
+greyscaleSquaresButton.addEventListener("click", function () {
     blackFlag = false;
     rainbowFlag = false;
     greyscaleFlag = true;
@@ -53,6 +52,7 @@ darkenSquaresButton.addEventListener("click", function () {
 
 // Functions
 function createSquares(numSquares) {
+    squaresContainer.innerHTML = "";
     for(let i = 0; i < numSquares * numSquares; i++) {
         let newSquare = document.createElement("div");
         addSquareStyle(newSquare);
