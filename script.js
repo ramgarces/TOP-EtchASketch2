@@ -69,6 +69,11 @@ eraserButton.addEventListener("click", function () {
 })
 
 clearButton.addEventListener("click", function () {
+    blackFlag = true;
+    rainbowFlag = false;
+    greyscaleFlag = false;
+    eraserFlag = false;
+    changeActiveButtonBorder();
     createSquares(numSquares);
 });
 
