@@ -17,7 +17,7 @@ squaresContainer.style.height = `${height}px`;
 // Color flag variables
 let blackFlag = true;
 let rainbowFlag = false;
-let darkenFlag = false;
+let greyscaleFlag = false;
 
 // Button event listeners
 changeSizeButton.addEventListener("click", function () {
@@ -36,19 +36,19 @@ changeSizeButton.addEventListener("click", function () {
 blackSquaresButton.addEventListener("click", function() {
     blackFlag = true;
     rainbowFlag = false;
-    darkenFlag = false;
+    greyscaleFlag = false;
 });
 
 rainbowSquaresButton.addEventListener("click", function () {
     blackFlag = false;
     rainbowFlag = true;
-    darkenFlag = false;
+    greyscaleFlag = false;
 })
 
 darkenSquaresButton.addEventListener("click", function () {
     blackFlag = false;
     rainbowFlag = false;
-    darkenFlag = true;
+    greyscaleFlag = true;
 })
 
 // Functions
@@ -63,7 +63,7 @@ function createSquares(numSquares) {
                 newSquare.style.backgroundColor = "black";
             } else if (rainbowFlag) {
                 newSquare.style.backgroundColor = randomSquareColor(); //random color
-            } else if (darkenFlag) {
+            } else if (greyscaleFlag) {
                 let newOpacity = squareOpacity + 0.1;
                 newSquare.style.backgroundColor = `rgba(0, 0, 0, ${newOpacity})`;
                 squareOpacity += 0.1;
