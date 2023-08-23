@@ -1,7 +1,10 @@
-// DOM Variables
+// DOM Variables - Selectors
 const body = document.querySelector("body");
 const squaresContainer = document.querySelector(".squares-container");
 const changeSizeButton = document.querySelector(".change-size");
+const blackSquaresButton = document.querySelector(".black-squares-button");
+const rainbowSquaresButton = document.querySelector(".rainbow-squares-button");
+const darkenSquaresButton = document.querySelector(".darken-squares-button");
 
 // Container variables
 const width = 500;
@@ -30,6 +33,11 @@ changeSizeButton.addEventListener("click", function () {
     createSquares(numSquares);
 });
 
+blackSquaresButton.addEventListener("click", function() {
+    blackFlag = true;
+    rainbowFlag = false;
+    darkenFlag = false;
+});
 
 // Functions
 function createSquares(numSquares) {
