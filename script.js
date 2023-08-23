@@ -65,6 +65,10 @@ eraserButton.addEventListener("click", function () {
     eraserFlag = true;
 })
 
+clearButton.addEventListener("click", function () {
+    createSquares(numSquares);
+});
+
 // Functions
 function createSquares(numSquares) {
     squaresContainer.innerHTML = "";
